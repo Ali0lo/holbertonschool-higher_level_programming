@@ -93,5 +93,6 @@ class Rectangle:
     def __repr__(self):
         """
         Returns a string representation of the rectangle to help with debugging.
+        This version includes the module name for proper representation.
         """
-        return f"<{self.__class__.__name__}({self.__width}, {self.__height})>"
+        return f"<3-rectangle.Rectangle object at {hex(id(self))}>"
