@@ -95,4 +95,5 @@ class Rectangle:
         Returns a string representation of the rectangle to help with debugging.
         This version includes the module name for proper representation.
         """
-        return f"<3-rectangle.Rectangle object at {hex(id(self))}>"
+        return (f"<3-rectangle.Rectangle object at "
+                f"{hex(id(self))}>")
