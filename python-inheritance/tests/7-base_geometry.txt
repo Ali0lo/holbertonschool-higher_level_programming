@@ -6,9 +6,9 @@ Using ``BaseGeometry``
 
 Import the class:
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> bg = BaseGeometry()
 
 Test area() method:
-    >>> bg = BaseGeometry()
     >>> bg.area()
     Traceback (most recent call last):
     ...
@@ -17,6 +17,19 @@ Test area() method:
 Test integer_validator with valid integers:
     >>> bg.integer_validator("my_int", 12)
     >>> bg.integer_validator("width", 89)
+    >>> bg.integer_validator("height", 1)
+
+Test integer_validator with no arguments:
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Test integer_validator with one argument:
+    >>> bg.integer_validator("age")
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 Test integer_validator with string:
     >>> bg.integer_validator("name", "John")
@@ -37,7 +50,7 @@ Test integer_validator with negative number:
     ValueError: distance must be greater than 0
 
 Test integer_validator with float:
-    >>> bg.integer_validator("height", 3.14)
+    >>> bg. integer_validator("height", 3.14)
     Traceback (most recent call last):
     ...
     TypeError: height must be an integer
@@ -49,13 +62,13 @@ Test integer_validator with None:
     TypeError: value must be an integer
 
 Test integer_validator with list:
-    >>> bg.integer_validator("list", [1, 2, 3])
+    >>> bg.integer_validator("list", [3])
     Traceback (most recent call last):
     ...
     TypeError: list must be an integer
 
-Test integer_validator with tuple:
-    >>> bg.integer_validator("tuple", (1, 2))
+Test integer_validator with tuple: 
+    >>> bg.integer_validator("tuple", (4,))
     Traceback (most recent call last):
     ...
     TypeError: tuple must be an integer
@@ -72,8 +85,8 @@ Test integer_validator with dict:
     ...
     TypeError: dict must be an integer
 
-Test integer_validator with set:
-    >>> bg.integer_validator("set", {1, 2, 3})
+Test integer_validator with set: 
+    >>> bg.integer_validator("set", {3, 4})
     Traceback (most recent call last):
     ...
     TypeError: set must be an integer
