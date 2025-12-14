@@ -1,0 +1,78 @@
+The ``1-my_list`` module
+======================
+
+Using ``MyList``
+-------------------
+
+Import the class: 
+    >>> MyList = __import__('1-my_list').MyList
+
+Test with positive integers: 
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+Test with negative integers: 
+    >>> my_list2 = MyList()
+    >>> my_list2.append(-1)
+    >>> my_list2.append(-4)
+    >>> my_list2.append(-2)
+    >>> my_list2.print_sorted()
+    [-4, -2, -1]
+
+Test with mixed positive and negative: 
+    >>> my_list3 = MyList()
+    >>> my_list3.append(5)
+    >>> my_list3.append(-2)
+    >>> my_list3.append(0)
+    >>> my_list3.append(3)
+    >>> my_list3.print_sorted()
+    [-2, 0, 3, 5]
+
+Test with empty list:
+    >>> my_list4 = MyList()
+    >>> my_list4.print_sorted()
+    []
+
+Test with single element:
+    >>> my_list5 = MyList()
+    >>> my_list5.append(42)
+    >>> my_list5.print_sorted()
+    [42]
+
+Test with already sorted list:
+    >>> my_list6 = MyList()
+    >>> my_list6.append(1)
+    >>> my_list6.append(2)
+    >>> my_list6.append(3)
+    >>> my_list6.print_sorted()
+    [1, 2, 3]
+
+Test with reverse sorted list:
+    >>> my_list7 = MyList()
+    >>> my_list7.append(5)
+    >>> my_list7.append(4)
+    >>> my_list7.append(3)
+    >>> my_list7.append(2)
+    >>> my_list7.append(1)
+    >>> my_list7.print_sorted()
+    [1, 2, 3, 4, 5]
+
+Test with duplicate values:
+    >>> my_list8 = MyList()
+    >>> my_list8.append(3)
+    >>> my_list8.append(1)
+    >>> my_list8.append(3)
+    >>> my_list8.append(2)
+    >>> my_list8.append(1)
+    >>> my_list8.print_sorted()
+    [1, 1, 2, 3, 3]
